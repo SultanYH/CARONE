@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ar">
 <head>
 <meta charset="utf-8" />
@@ -144,26 +145,26 @@
 
   /* css لقاىمة المواصفات */
   body {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #000;/* لون الخلفية */
   margin: 0;
   padding: 20px;
-  color: #ff7b00;
+  color: #ff7300;/* لون النص الرئيسي */
 }
 
- .car-container {
+.car-container {
   max-width: 900px;
   margin: 0 auto;
-  background-color: #fff;
+  background: #7a7575; /* لون خلفية القاىمة */
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   overflow: hidden;
 }
 
 .car-header {
-  background-color: #000000;
-  color: #fff;
-  padding: 20px 30px;
+  background: #000000;
+  color: #ff7b00;/* لون النص */
+  padding: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -177,58 +178,74 @@
 }
 
 .specs-section {
-  padding: 20px 30px;
+  padding: 20px;
 }
 
 .specs-section h2 {
   font-size: 20px;
-  margin-bottom: 12px;
-  color: #000000;
+  margin-bottom: 15px;
+  color: #000000;/* لون العنوان */
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .specs-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #000000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .specs-list li {
-  display: flex;
-  justify-content:space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ffffff;
+  background: #4d4949;/* لون خلفية المواصفات */
+  padding: 12px 15px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #eee;/* حدود خفيفة */
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);/* ظل خفيف */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-/*rigth side list color*/
+
+.specs-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .specs-list li span:first-child {
   font-weight: 600;
-  color: #333;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.specs-list li span:last-child {
+  color: #000000;/* لون الوصف */
 }
 
 .car-description {
-  padding: 20px 30px;
-  font-size: 15px;
+  padding: 20px;
+  font-size: 16px;
   line-height: 1.6;
-  color: #000000;
+  color: #000000;/* لون النص */
 }
 
-@media(max-width:600px){
-  .specs-list li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .specs-list li span:last-child {
-    margin-top: 5px;
-    font-weight: 500;
+.email {
+  text-align: center;
+  font-size: 15px;
+  color: chocolate;/* لون البريد الإلكتروني */
+  margin: 15px 0 25px 0;
+  font-weight: bold;
+}
+
+@media(max-width: 700px) {
+  .specs-list {
+    grid-template-columns: 1fr; /* عمود واحد في الهاتف */
   }
 }
-    .email {
-        text-align: left;
-        font-size: 15px;
-        color: chocolate;
-        display: contents;
-    }
 
     /* للتواصل */
 
@@ -258,7 +275,7 @@
 .footer-item p,
 .footer-item a {
   font-size: 15px;
-  color: #ccc;
+  color: #ccc;/* لون النص */
   text-decoration: none;
 }
 
@@ -361,13 +378,13 @@ body {
   <div class="car-header">2025 Aston Martin DB12 v12</div>
 
   <div class="specs-section">
-   <center><h2>مواصفات السيارة</h2></center> 
+   <center><h2>Car Description</h2></center>
     <ul class="specs-list">
       <li>4.0 لتر  v8 توين تيربو <span>المحرك</span></li>
       <li> 671 HP <span>القوة</span></li>
       <li> بثماني سرعات أوتوماتيك <span>ناقل الحركة</span></li>
       <li> 0-100 كم/س في 3.6 ثانية <span>التسارع</span></li>
-      <li>20 لتر / 100 كم  <span>استهلاك الوقود</span> </li>
+    
       <li> 50 لتر <span>سعة الخزان</span></li>
       <li> ABS, EBD, Airbags<span>نظام الأمان</span></li>
     </ul>
